@@ -21,7 +21,7 @@ $(function() {
     it('urls are defined and not empty', function() {
       for (let feed of allFeeds) {
         expect(feed.url).toBeDefined();
-        expect(feed.url).not.toBe(0);
+        expect(feed.url.length).not.toBe(0);
       }
     });
 
@@ -34,7 +34,7 @@ $(function() {
     it('names are defined and not empty', function() {
       for (let feed of allFeeds) {
         expect(feed.name).toBeDefined();
-        expect(feed.name).not.toBe(0);
+        expect(feed.name.length).not.toBe(0);
       }
     });
   });
@@ -75,9 +75,10 @@ $(function() {
     })
 
     it('loadFeed function is called and completes its work', function() {
-      const feed = document.querySelector('.feed');
+      const feed = document.querySelector('.feed .entry');
 
       expect(feed.children.length > 0).toBe(true);
+      
     })
 
 
