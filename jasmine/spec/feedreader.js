@@ -75,10 +75,10 @@ $(function() {
     })
 
     it('loadFeed function is called and completes its work', function() {
-      const feed = document.querySelector('.feed .entry');
+      const feed = document.querySelectorAll('.feed .entry');
 
-      expect(feed.children.length > 0).toBe(true);
-      
+      expect(feed.length > 0).toBe(true);
+
     })
 
 
